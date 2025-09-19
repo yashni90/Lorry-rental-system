@@ -5,6 +5,7 @@ require('dotenv').config();
 
 const bookingRoutes = require('./routes/bookingRoutes.js');
 const driverRoutes = require('./routes/driverRoutes');
+const userRoutes = require('./routes/userRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -21,6 +22,7 @@ mongoose.connect(process.env.MONGO_URI)
 // Routes
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/drivers', driverRoutes);
+app.use('/api/users', userRoutes);
 
 
 // Start the server

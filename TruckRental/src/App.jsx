@@ -10,6 +10,10 @@ import AdminDashboard from './pages/AdminManagement'; // assuming this is the ad
 import AddDrivers from './pages/AddDrivers';
 import AllDrivers from './pages/AllDrivers';
 import ManageDispatch from './pages/ManageDispatch';
+import Signup from './pages/Signup';
+import Signin from './pages/Signin';
+import UserDashboard from './pages/UserDashboard';
+import AllUsers from './pages/AllUsers';
 
 function App() {
 
@@ -17,7 +21,7 @@ function App() {
   const location = useLocation();
 
   // Paths where Navbar should NOT be shown
-  const hideNavbarPaths = ['/log', '/owner', '/adddriver', '/alldriver', '/managedispatch'];
+  const hideNavbarPaths = ['/admin', '/owner', '/adddriver', '/alldriver', '/managedispatch', '/user', '/my-bookings' , '/alluser'];
   const showNavbar = !hideNavbarPaths.includes(location.pathname);
 
   return (
@@ -30,10 +34,14 @@ function App() {
         <Route path='/cars' element={<Trucks/>}/>
         <Route path='/my-bookings' element={<MyBookings/>}/>
         <Route path='/addbooking' element={<AddBooking/>}/>
-        <Route path='/log' element={<AdminDashboard/>}/>
+        <Route path='/admin' element={<AdminDashboard/>}/>
         <Route path='/adddriver' element={<AddDrivers/>}/>
          <Route path='/alldriver' element={<AllDrivers/>}/>
          <Route path='/managedispatch' element={<ManageDispatch/>}/>
+         <Route path="/signup" element={<Signup />} />
+         <Route path="/signin" element={<Signin />} />
+         <Route path="/user" element={<UserDashboard />} />
+         <Route path="/alluser" element={<AllUsers />} />
       </Routes>
     </>
   )
