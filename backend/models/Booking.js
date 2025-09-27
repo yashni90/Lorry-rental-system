@@ -19,7 +19,9 @@ const bookingSchema = new mongoose.Schema({
     enum: ['pending', 'accepted', 'rejected'],
     default: 'pending',
   },
-    assignedDriver: { type: mongoose.Schema.Types.ObjectId, ref: 'Driver', default: null },
+  assignedDriver: { type: mongoose.Schema.Types.ObjectId, ref: 'Driver', default: null },
+
+  paid: { type: Boolean, default: false },
   
 });
 

@@ -14,6 +14,10 @@ import Signup from './pages/Signup';
 import Signin from './pages/Signin';
 import UserDashboard from './pages/UserDashboard';
 import AllUsers from './pages/AllUsers';
+import AddExpenses from './pages/AddExpenses';
+import AllExpenses from './pages/AllExpenses';
+import PaymentPage from './pages/CustomerPayment';
+import AllIncomes from './pages/AllIncomes';
 
 function App() {
 
@@ -21,7 +25,7 @@ function App() {
   const location = useLocation();
 
   // Paths where Navbar should NOT be shown
-  const hideNavbarPaths = ['/admin', '/owner', '/adddriver', '/alldriver', '/managedispatch', '/user', '/my-bookings' , '/alluser'];
+  const hideNavbarPaths = ['/admin', '/owner', '/adddriver', '/alldriver', '/managedispatch', '/user', '/my-bookings' , '/alluser', '/addexpenses', '/allexpenses', '/cuspayment', '/allincomes'];
   const showNavbar = !hideNavbarPaths.includes(location.pathname);
 
   return (
@@ -42,6 +46,10 @@ function App() {
          <Route path="/signin" element={<Signin />} />
          <Route path="/user" element={<UserDashboard />} />
          <Route path="/alluser" element={<AllUsers />} />
+         <Route path="/addexpenses" element={<AddExpenses />} />
+         <Route path="/allexpenses" element={<AllExpenses />} />
+         <Route path="/cuspayment" element={<PaymentPage />} />
+         <Route path="/allincomes" element={<AllIncomes />} />
       </Routes>
     </>
   )

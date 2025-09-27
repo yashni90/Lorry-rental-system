@@ -111,6 +111,39 @@ function AdminDashboard() {
             </li>
           </Link>
 
+          <Link to="/allincomes">
+            <li
+              onClick={() => setActiveTab('drivers')}
+              className={`cursor-pointer flex items-center px-6 py-3 rounded hover:bg-gray-200 transition ${
+                activeTab === 'drivers' ? 'bg-gray-200 font-semibold' : ''
+              }`}
+            >
+              📈 <span className="ml-2">Incomes</span>
+            </li>
+          </Link>
+
+          <Link to="/addexpenses">
+            <li
+              onClick={() => setActiveTab('drivers')}
+              className={`cursor-pointer flex items-center px-6 py-3 rounded hover:bg-gray-200 transition ${
+                activeTab === 'drivers' ? 'bg-gray-200 font-semibold' : ''
+              }`}
+            >
+              💵 <span className="ml-2">Add expenses</span>
+            </li>
+          </Link>
+
+          <Link to="/allexpenses">
+            <li
+              onClick={() => setActiveTab('drivers')}
+              className={`cursor-pointer flex items-center px-6 py-3 rounded hover:bg-gray-200 transition ${
+                activeTab === 'drivers' ? 'bg-gray-200 font-semibold' : ''
+              }`}
+            >
+              💰 <span className="ml-2">All expenses</span>
+            </li>
+          </Link>
+
           <Link to="/alltruck">
             <li
               onClick={() => setActiveTab('trucks')}

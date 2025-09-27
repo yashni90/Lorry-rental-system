@@ -98,6 +98,11 @@ function UserDashboard() {
               🚛 <span className="ml-2">My Bookings</span>
             </li>
           </Link>
+          <Link to="/cuspayment">
+            <li className="cursor-pointer flex items-center px-6 py-3 rounded hover:bg-gray-200 transition">
+              💵 <span className="ml-2">Payments</span>
+            </li>
+          </Link>
           <Link to="/alltruck">
             <li className="cursor-pointer flex items-center px-6 py-3 rounded hover:bg-gray-200 transition">
               ⚙️ <span className="ml-2">Settings</span>
